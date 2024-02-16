@@ -1,11 +1,27 @@
-package develhope;
+package develhope.src;
 
 public class Auto {
+
 
     private String brand; //get
     private String model; //get
     private String carRegistration; //set-get
     private int engineCapacity; //get
+
+    public Auto(String model, String brand, String carRegistration, int engineCapacity) {
+        this.brand = brand;
+        this.model = model;
+        this.carRegistration = carRegistration;
+        this.engineCapacity = engineCapacity;
+    }
+
+    public void setCarRegistration(String carRegistration) {
+        this.carRegistration = carRegistration;
+    }
+
+    public String getCarRegistration() {
+        return carRegistration;
+    }
 
     public void setBrand(String brand) {
         this.brand = brand;
@@ -31,10 +47,6 @@ public class Auto {
         return engineCapacity;
     }
 
-    public Auto (String carRegistration){
-        this.carRegistration = carRegistration;
-    }
-
 
     @Override
     public String toString() {
@@ -46,3 +58,5 @@ public class Auto {
                 '}';
     }
 }
+
+
